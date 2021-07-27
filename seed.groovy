@@ -28,7 +28,7 @@ for (i in 0..count) {
                     }
                     'branches' {
                         'hudson.plugins.git.BranchSpec' {
-                            'name'('main')
+                            'name'('*/tags/*')
                         }
                     }
                 }
@@ -45,7 +45,7 @@ pipelineJob("Deployment Pipeline") {
       'scm'(class:'hudson.plugins.git.GitSCM',plugin:'git') {
         'userRemoteConfigs' {
           'hudson.plugins.git.UserRemoteConfig' {
-            'url'('https://github.com/Sarath-Zelarsoft/jenkins.git')
+            'url'('https://github.com/Sarath-Zelarsoft/Jenkins.git')
           }
         }
         'branches' {
